@@ -1,0 +1,331 @@
+/* font family roboto */
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/* NAVBAR */
+
+.navbar{
+    border-bottom: rgb(158, 199, 44) 2px solid;
+}
+
+.bg-dark{
+    background-color: rgba(0,0, 0, .9) !important;
+}
+
+.nav-item .nav-link{
+    color:white !important;
+    text-transform: uppercase;
+    font-size: 18px;
+    transition: color .5s ease;
+}
+.nav-link:hover{
+    color: rgb(158, 199, 44) !important ;
+}
+
+
+/* HEADER SECTION */
+
+#headerSection{
+    background: url('../images/homepagebg.jpg') no-repeat center center fixed;
+    background-size: cover ;
+    height: 100vh !important;
+
+}
+
+
+#headerSection .overlay{
+    background-color: rgba(0, 0, 0, 0.7);
+
+}
+#headerSection .row {
+    height: 100vh;
+}
+
+/* #headerSection h2{
+    color: white;
+} */
+
+
+#headerSection h1{
+    color: rgb(158, 199, 44);
+}
+
+
+/*--------------------------------------------------------------
+# ABOUT Section
+--------------------------------------------------------------*/
+/* Section Properties */
+
+section {
+    position: relative;
+}
+
+.md-padding {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.section-header {
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.section-header .title {
+    text-transform: capitalize;
+}
+
+.title::after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 60px;
+    background-color: rgb(158, 199, 44);
+    margin: 20px auto 0;
+}
+
+.about {
+	position: relative;
+	padding: 40px 20px;
+	border: 1px solid #eee;
+	margin: 15px 0px;
+	cursor: pointer;
+	transition: 1s all;
+    -webkit-transition: 1s all;
+    
+}
+
+.about i {
+	font-size: 36px;
+	color: rgb(158, 199, 44);
+	margin-bottom: 20px;
+}
+.about h3 {
+    font-size: 21px;
+}
+
+.about:after {
+	content: "";
+	background-color: #2a2a2a;
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	height: 0%;
+	z-index: -1;
+	transition: 1s height;
+	-webkit-transition: 1s height;
+
+}
+
+.about:hover:after {
+	height: 100%;
+}
+
+.about:hover i, .about:hover p, .about:hover h3 {
+	color: white;
+}
+
+
+/* ---------------------------
+# Parallax Section
+-----------------------------*/
+
+#statement {
+    background: linear-gradient( rgba(20, 20 ,20 , .8), rgba(20, 20 ,20 , .8)),
+    url("../images/pallaxabg.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+}
+
+#statement h1 {
+    color:rgb(158, 199, 44);
+    font-size: 24px;
+    font-weight: 100;
+}
+
+
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+
+footer {
+	position: relative;
+	padding-top: 80px;
+	padding-bottom: 80px;
+	background-color: #2a2a2a;
+}
+
+.footer-follow {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.footer-follow li {
+	display: inline-block;
+	margin-right: 10px;
+	margin-bottom: 15px
+}
+
+.footer-follow i {
+	color: rgb(158, 199, 44);
+}
+
+.footer-follow li a {
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	font-size: 24px;
+}
+
+.footer-copyrights p{
+	text-align: center;
+	font-size: 14px;
+	margin: 0;
+	text-transform: uppercase;
+
+}
+
+
+
+/* ABOUT US PAGES */
+
+/* ============================
+ ABOUT US PAGE HEADER
+============================== */
+
+.page-image {
+	display: table;
+	width: 100%;
+
+}
+
+.page-image-about {
+    background: linear-gradient( rgba(20, 20, 20, .8), rgba(20, 20, 20, .8)), url("../images/aboutusheader.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+    background-position: center;
+}
+
+.page-title {
+    display: table-cell;
+
+	vertical-align: middle;
+	text-align: center;
+    font-size: 50px;
+	line-height: 50px;
+	margin-bottom: 25px;
+	font-weight: 200;
+}
+
+/* ============================
+ABOUT US SECTION
+============================== */
+
+#aboutus {
+	background-color: #f2f2f2;
+}
+
+#aboutus .project-text {
+	padding: 3rem;
+	font-size: 90%;
+}
+
+#aboutus p {
+    font-size: 18px;
+}
+
+.bg-main {
+background-color: rgb(158, 199, 44);
+
+}
+
+
+
+/* CONTACT PAGE */
+
+
+/* ============================
+CONTACT SECTION
+============================== */
+
+.page-image-contact {
+    background: linear-gradient( rgba(20, 20, 20, .8), rgba(20, 20, 20, .8)), url("../images/contactBG.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+    background-position: center;
+    
+}
+
+#contact {
+	background-color: #f2f2f2;
+	background-image: url("../img/map-image.png");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+
+#contact .form-group {
+	margin-bottom: 25px;
+}
+
+#contact .form-group input,
+#contact .form-group textarea {
+	padding: 20px;
+}
+
+#contact .form-group input.form-control {
+	height: auto;
+}
+
+#contact .form-group textarea.form-control {
+	height: 248px;
+}
+
+#contact .form-control:focus {
+	border-color: rgb(158, 199, 44);
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+#contact::-webkit-input-placeholder {
+	font-weight: 700;
+	color: #ced4da;
+}
+
+#contact:-moz-placeholder {
+	font-weight: 700;
+	color: #ced4da;
+}
+
+#contact::-moz-placeholder {
+	font-weight: 700;
+	color: #ced4da;
+}
+
+#contact:-ms-input-placeholder {
+	font-weight: 700;
+	color: #ced4da;
+}
+
+#contact .main-btn {
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 0;
+	background-color: rgb(158, 199, 44);
+	color: #fff;
+}
+
+#contact .main-btn:hover {
+   
+	background-color: #fff;
+	color:rgb(158, 199, 44);
+}
+
+
