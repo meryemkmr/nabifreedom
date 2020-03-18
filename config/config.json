@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "postgres",
-    "password": null,
+    "password": "nabi2020",
     "database": "postgres",
     "host": "nabifreedom.cchn87o90c10.us-east-2.rds.amazonaws.com",
     "dialect": "postgres"

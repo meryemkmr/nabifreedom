@@ -24,6 +24,33 @@ body{
     color: rgb(158, 199, 44) !important ;
 }
 
+.nav-item .dropdown .btn .nav-link{
+	color:white !important;
+    text-transform: uppercase;
+    font-size: 18px;
+	transition: color .5s ease;
+	
+}
+.dropdown {
+	border: rgb(158, 199, 44) 2px solid !important;
+}
+.dropdown-menu:hover {
+	color: rgb(158, 199, 44) !important ;
+	
+}
+.dropdown-item {
+	color:white !important;
+    text-transform: uppercase;
+    font-size: 18px;
+	transition: color .5s ease;
+	background-color: rgba(0,0, 0, .9) !important;
+	height: 100%;
+	
+}
+.dropdown-item:hover {
+	color: rgb(158, 199, 44) !important ;
+}
+
 
 /* HEADER SECTION */
 
@@ -329,3 +356,18 @@ CONTACT SECTION
 }
 
 
+
+/* REGISTER SECTION
+ */
+
+ .card .card-body h1{
+	color:rgb(158, 199, 44) !important;
+    font-size: 24px !important;
+    font-weight: 100 !important;
+
+ }
+/* #register h1 {
+    color:rgb(158, 199, 44) !important;
+    font-size: 24px !important;
+    font-weight: 100 !important;
+} */
