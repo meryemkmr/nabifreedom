@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>ADOPTION</title>
+    <title>Contact Us</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -88,32 +88,34 @@
 
 		<div class="row">
 			<div class="col-lg-12">
-				<form id="contactForm" name="sentMessage" novalidate="novalidate">
+				<!-- <form id="contactForm" name="sentMessage" novalidate="novalidate" action="/contact" method="POST"> -->
+				<form id="contactForm" name="sentMessage" action="/contact" method="POST">
 					<div class="row">
 						<div class="col-md-6">
 							<div class="form-group">
-								<input class="form-control" id="name" type="text" placeholder="Your Name *" required="required" data-validation-required-message="Please enter your name.">
+								<input class="form-control" id="name" name="contactName" type="text" placeholder="Your Name *" required="required" data-validation-required-message="Please enter your name.">
 								<p class="help-block text-danger"></p>
 							</div>
 							<div class="form-group">
-								<input class="form-control" id="email" type="email" placeholder="Your Email *" required="required" data-validation-required-message="Please enter your email address.">
+								<input class="form-control" id="email" name="contactEmail" type="email" placeholder="Your Email *" required="required" data-validation-required-message="Please enter your email address.">
 								<p class="help-block text-danger"></p>
 							</div>
 							<div class="form-group">
-								<input class="form-control" id="phone" type="tel" placeholder="Your Phone *" required="required" data-validation-required-message="Please enter your phone number.">
+								<input class="form-control" id="phone" name="contactPhone" type="tel" placeholder="Your Phone *" required="required" data-validation-required-message="Please enter your phone number.">
 								<p class="help-block text-danger"></p>
 							</div>
 						</div>
 						<div class="col-md-6">
 							<div class="form-group">
-								<textarea class="form-control" id="message" placeholder=" Purpose For Contacting Us *" required="required" data-validation-required-message=" Purpose for contacting us"></textarea>
+								<textarea class="form-control" id="message" name="contactMessage" placeholder=" Purpose For Contacting Us *" required="required" data-validation-required-message=" Purpose for contacting us"></textarea>
 								<p class="help-block text-danger"></p>
 							</div>
 						</div>
 						<div class="clearfix"></div>
 						<div class="col-lg-12 text-center">
 							<div id="success">
-							<button id="sendMessageButton" class="main-btn" type="submit">Send Message</button>
+              <button id="sendMessageButton" class="main-btn" type="submit" value="Submit">Send Message</button>
+              <!-- <input type="submit" value="Submit"> -->
 						</div>
 					</div>
 				</form>
