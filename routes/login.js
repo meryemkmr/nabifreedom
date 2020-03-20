@@ -80,42 +80,7 @@ router.get('/error',(req,res)=>{
     res.send('error');
 })
 
-//REGISTRATION
-router.get('/register',  ((req, res) => {
-    let error = req.query.error;
-    let err = "hidden";
 
-    if (error) {
-        err = "visible"
-    }
-    //encrypt the password
-    //add information to database 
-
-    
-    res.render('register',{
-        error:err
-    })
-}))
-
-
-router.post('/register',(req,res)=>{
-    let fName = req.body.fName;
-    let lName = req.body.lName;
-    let email = req.body.email;
-    let username = req.body.username;
-    let password =  bcrypt.hashSync(req.body.password,8);
-    let password2 = req.body.password2;
-
-    db.user.create({fName:fName, lName:lName, username:username, email:email, password:password})
-    .then((user) => {
-        // req.flash('success_msg', 'You are now registered and can log in');
-        res.redirect('/login')
-    })
-    .catch((error) => {
-        res.redirect('register?error=visible')
-    })
-
-})
 
 
 
@@ -124,10 +89,8 @@ router.post('/register',(req,res)=>{
 
 //LOGOUT
 router.get('/logout', (req, res) => {
-    
-   
-    res.redirect('/login');
-  });
+res.redirect('/login');
+});
 
 
 module.exports = router;
