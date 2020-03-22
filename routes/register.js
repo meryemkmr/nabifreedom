@@ -41,18 +41,36 @@ router.post('/register', (req,res) => {
         res.redirect('/error');
     } else {//check to see if the email address has already been used
         db.users.findAll({where: {email: email}})
-        .then((results) => {
-            if(results.length > 0){ //is someone has already registered with that address
+        .then((emailResults) => {
+            if(emailResults.length > 0){ //if someone has already registered with that email address
                 res.redirect('/error');
-            } else{ // checks passed, add user to database
-                db.users.create({fName: fName, lName:lName, email:email, username:username, password:password, })
-                .then((user) => {
-                    res.redirect('./login');
+            } else{ //email check passed, now look at username
+                db.users.findAll({where: {username: username}})
+                .then((usernameResults) => {
+                    if(usernameResults.length > 0){ //if someone has already registered with that email address
+                        res.redirect('/error');
+                    }
+                    else {//if the email and username checks both pass, add the user to the database
+                        db.users.create({fName: fName, lName:lName, email:email, username:username, password:password, })
+                        .then((user) => {
+                            res.redirect('./login');
+                        })
+                    }
                 })
+                
+                // db.users.create({fName: fName, lName:lName, email:email, username:username, password:password, })
+                // .then((user) => {
+                //     res.redirect('./login');
+                // })
                 .catch((error) => {
                     console.log(error);
+                    res.send('database username query error.');
                 })
             }
+        })
+        .catch(error=>{
+            console.log(error);
+            res.send('database email query error.');
         })
     }
 
