@@ -1,0 +1,27 @@
+.breadcrumb{
+    background:#cccccc;
+    color: #333333;
+}
+.breadcrumb a{
+    color: #333333;
+}
+
+.badge{
+    margin-left: 22px;
+}
+h2 .badge{
+    margin-left: 50px;
+
+    
+}
+h2 .badge-secondary{
+    font-size: 12px;
+}
+
+.dash-box{
+    text-align: center;
+    background-color: #f4f4f4;
+}
+.card-title{
+    text-align: center;
+}
