@@ -41,9 +41,9 @@ router.post('/login',(req,res)=>{
                 if (response) {
                     // set session variable
                     req.session.emailid = email;
-                    console.log(password);
-                    console.log(email);
-                    console.log(results);
+                    // console.log(password);
+                    // console.log(email);
+                    // console.log(results);
                     res.redirect('/');
                 }
                 else {

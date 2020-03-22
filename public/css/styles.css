@@ -357,18 +357,88 @@ CONTACT SECTION
 }
 
 
+/* ==========TESTIMONIAL SECTION
+=============================================== */
 
-/* REGISTER SECTION
- */
+#testimonials{
+	background: linear-gradient(
+		rgba(0,0,0,.7),
+		rgba(0,0,0,.7),
+	);
+	
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+.carousel-control-prev-icon{
+	width: 40px;
+	height: 40px;
+	
+  }
+  .carousel-control-next-icon{
+	width: 40px;
+	height: 40px;
+   
+  }
+  .p1{
+	text-align: center;
+	color:gray;
+	font-size: 70px;
+  }
+  .p2{
+	text-align: center;
+	color:gray;
+	font-size: 50px;
+  }
+   .h5{
+	text-align: center;
+	color:turquoise;
+	font-size: 50px;
+  } 
+   .h6{
+	text-align: center;
+	color:turquoise;
+	font-size: 30px;
+  } 
 
- .card .card-body h1{
-	color:rgb(158, 199, 44) !important;
-    font-size: 24px !important;
-    font-weight: 100 !important;
 
- }
-/* #register h1 {
-    color:rgb(158, 199, 44) !important;
-    font-size: 24px !important;
-    font-weight: 100 !important;
-} */
+
+
+
+
+
+
+
+
+/* ==========PEOPLE SECTION
+=============================================== */
+
+
+#people .card{
+	border: none;
+	opacity: 0.5;
+	cursor: pointer;
+	transition: all 0.5s ease;
+}
+#people .card:hover{
+	opacity: 1;
+}
+
+.card .main-btn{
+	padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 0;
+	background-color: rgb(158, 199, 44);
+	color: #fff;
+}
+.card .main-btn:hover {
+   
+	background-color: #fff;
+	color:rgb(158, 199, 44);
+}
+
+
+
+
