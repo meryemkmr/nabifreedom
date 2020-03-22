@@ -36,6 +36,8 @@ app.use(require('./routes/'));
 app.use(require('./routes/about.js'));
 app.use(require('./routes/contact.js'));
 app.use(require('./routes/login.js'))
+app.use(require('./routes/admin.js'))
+app.use(require('./routes/test.js'))
 
 
 
