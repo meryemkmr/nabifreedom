@@ -40,12 +40,12 @@ router.post('/register', (req,res) => {
     } else if(passwordToCheck != password2) { //check to see that the passwords match
         res.redirect('/error');
     } else {//check to see if the email address has already been used
-        db.user.findAll({where: {email: email}})
+        db.users.findAll({where: {email: email}})
         .then((results) => {
             if(results.length > 0){ //is someone has already registered with that address
                 res.redirect('/error');
             } else{ // checks passed, add user to database
-                db.user.create({fName: fName, lName:lName, email:email, username:username, password:password, })
+                db.users.create({fName: fName, lName:lName, email:email, username:username, password:password, })
                 .then((user) => {
                     res.redirect('./login');
                 })
@@ -111,7 +111,7 @@ module.exports = router;
 //     let password =  bcrypt.hashSync(req.body.password,8);
 //     let password2 = req.body.password2;
 
-//     db.user.create({fName:fName, lName:lName, username:username, email:email, password:password})
+//     db.users.create({fName:fName, lName:lName, username:username, email:email, password:password})
 //     .then((user) => {
 //         // req.flash('success_msg', 'You are now registered and can log in');
 //         res.redirect('/login')

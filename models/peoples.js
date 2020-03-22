@@ -6,7 +6,7 @@ module.exports = (sequelize, DataTypes) => {
     city: DataTypes.STRING,
     shortSummary: DataTypes.STRING,
     body: DataTypes.STRING
-  }, {});
+  }, {freezeTableName: true});
   peoples.associate = function(models) {
     // associations can be defined here
   };
