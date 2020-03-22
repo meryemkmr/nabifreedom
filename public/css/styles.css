@@ -119,7 +119,8 @@ section {
 	margin: 15px 0px;
 	cursor: pointer;
 	transition: 1s all;
-    -webkit-transition: 1s all;
+	-webkit-transition: 1s all;
+	height: 18rem;
     
 }
 
