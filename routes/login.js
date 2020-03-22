@@ -20,11 +20,25 @@ router.post('/login',(req,res)=>{
             //test if passwords match. Format: bcrypt.compare(password the user entered, database password, callback Function)
             //interestingly, we don't have to do anything special to the unencrypted password the user entered for bcrypt.compare to check it
             //against the encrypted password
+            // console.log(results);
+            // bcrypt.compare(password, results[0].password, (error, response) => {
+            //     //response = match, error = no match  
+            //     if(response){ //if the passwords match
+            //         req.session.userid = email; //here we create a cookie based on the user logging in successfully
+            //         res.redirect('/');
+            //     } else { //if the passwords do not match
+            //         res.redirect('/error')
+            //     }
             bcrypt.compare(password, results[0].password, (error, response) => {
-                //response = match, error = no match  
+            //response = match, error = no match  
                 if(response){ //if the passwords match
-                    req.session.userid = email; //here we create a cookie based on the user logging in successfully
-                    res.redirect('/');
+                    if(results[0].username == 'admin') {
+                        req.session.userid = 'admin';
+                        res.redirect('/admin');
+                    } else {
+                        req.session.userid = email; //here we create a cookie based on the user logging in successfully
+                        res.redirect('/');
+                    }
                 } else { //if the passwords do not match
                     res.redirect('/error')
                 }
