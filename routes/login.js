@@ -14,7 +14,7 @@ router.post('/login',(req,res)=>{
     let email = req.body.email;
     let password = req.body.password;
 
-    db.user.findAll({where: {email: email}}) //see if the email already exists in our database
+    db.users.findAll({where: {email: email}}) //see if the email already exists in our database
     .then(((results) => { //an array of objects. each object is a record in the database.
         if(results.length > 0){ //if a matching email was found
             //test if passwords match. Format: bcrypt.compare(password the user entered, database password, callback Function)
