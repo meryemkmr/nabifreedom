@@ -358,17 +358,73 @@ CONTACT SECTION
 
 
 
-/* REGISTER SECTION
+/* ADMIN SECTION
  */
 
- .card .card-body h1{
-	color:rgb(158, 199, 44) !important;
-    font-size: 24px !important;
-    font-weight: 100 !important;
+ .card .btn {
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 0;
+	background-color: rgb(158, 199, 44);
+	color: #fff;
+}
+.card .btn-success {
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 0;
+	background-color: rgb(158, 199, 44);
+	color: #fff;
+	border-color: rgb(0, 0, 0);
+}
+.card .btn-danger {
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 0;
+	background-color: rgb(158, 199, 44);
+	color: #fff;
+	border-color: rgb(0,0,0);
+}
 
- }
-/* #register h1 {
-    color:rgb(158, 199, 44) !important;
-    font-size: 24px !important;
-    font-weight: 100 !important;
-} */
+
+.card .main-btn:hover {
+   
+	background-color: #fff;
+	color:rgb(158, 199, 44);
+}
+
+.breadcrumb{
+    background:#cccccc;
+    color: #333333;
+}
+.breadcrumb a{
+    color: #333333;
+}
+
+.badge{
+    margin-left: 22px;
+}
+h2 .badge{
+    margin-left: 50px;
+
+    
+}
+h2 .badge-secondary{
+    font-size: 12px;
+}
+
+.dash-box{
+    text-align: center;
+    background-color: #f4f4f4;
+}
+.card-title{
+    text-align: center;
+}
+
+#main .list-group-item-action{
+	padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 0;
+	background-color: rgb(158, 199, 44);
+	color: #fff;
+	border-color: rgb(0,0,0);;
+}
