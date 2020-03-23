@@ -3,7 +3,7 @@ var router = express.Router();
 
 router.get('/', function(req, res) {
   res.render('index', {
-      pageTitle: 'Home',
+      pageTitle: 'NABIFREEDOM',
       // artwork: pagePhotos,
       // speakers: pageSpeakers,
       pageID: 'home'

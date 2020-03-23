@@ -12,7 +12,7 @@ router.get('/about', function(req, res) {
 
   res.render('about'
   , {
-    pageTitle: 'About ',
+    pageTitle: 'ABOUT US ',
     
     pageID: 'about'
   }
