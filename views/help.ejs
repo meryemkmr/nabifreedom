@@ -142,15 +142,17 @@
     </div>
       <div class="container">
           <div class="row">
+            <% peoples.forEach(record => { %>
               <div class="col-md-3">
                   <div class="card text-center ">
                       <div class="card-block">
-                            <img src="/images/people1.jpg" alt="" class="img-fluid rounded-circle my-4">
-                            <h3>Joe Doe</h3>
-                            <h5>Houston</h5>
-                            <p class="text-mute">Lorem ipsum dolor sit amet consectetur  elit...</p>
+                        <a href="/<%= record.name %>"></a>
+                            <img src="/images/<%= record.imgURL %>" alt="" class="img-fluid rounded-circle my-4">
+                            <h3><%= record.name %></h3>
+                            <h5><%= record.city %></h5>
+                            <p class="text-mute"><%= record.shortSummary %></p>
                             <div class="p-4">
-                            <a href=""><button id="sendMessageButton" class="main-btn" type="submit" value="Submit">Learn More...</button></a>
+                            <a href="/<%= record.name %>"><button id="sendMessageButton" class="main-btn" type="submit" value="Submit">Learn More...</button></a>
                           </div>
                       </div>
                   </div>
