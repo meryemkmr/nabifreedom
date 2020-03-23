@@ -1,23 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>LOGIN</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- <------------GOOGLE ROBOTO FONTS---------------------->
-
-      <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
-    <!-- <------------Font Awesome-----------------> 
-
-       <!--  Font Awesome CDN Link -->
-       <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    
-      <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    
-    <!-- STYLES CSS -->
-    <link rel="stylesheet" href="/css/styles.css">
+    <%- include ("./partials/head.ejs") %>
   </head>
   <body>
 
@@ -29,38 +13,7 @@
      <!-- <-----------------NAVBAR----------------------------------> 
 
 
-
-
-
-
-     <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed top">
-      <div class="container">
-          <button class="navbar-toggler" data-toggle="collapse" data-target="#nvbCollapse">
-              <span class="navbar-toggler-icon"></span>
-          </button>
-          <a href="#" class="navbar-brand"><img src="/images/NABI.png" alt=""></a>
-          <div class="collapse navbar-collapse" id="nvbCollapse">
-              <ul class="navbar-nav ml-auto">
-                  <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
-                  <li class="nav-item"><a href="/help" class="nav-link">Help People</a></li>
-                  <li class="nav-item"><a href="/about" class="nav-link">About Us</a></li>
-                  <li class="nav-item"><a href="/contact" class="nav-link">Contact Us</a></li>
-                  <li class="nav-item">
-                    <div class="dropdown">
-                      <button class="btn nav-link  dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Login
-                      </button>
-                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="/login">LogIn</a>
-                        <a class="dropdown-item" href="/register">Register</a>
-                        <a class="dropdown-item" href="/logout">LogOut</a>
-                      </div>
-                    </div>
-                    </li>
-              </ul>
-          </div>
-      </div>
-  </nav>
+     <%- include ("./partials/header.ejs") %>
 
 
 
@@ -116,54 +69,9 @@
     Footer  Section
 ============================-->
 
-<section id="about" class="md-padding">
-  <div class="container">
-    <div class="row text-center">
-      <div class="col-md-4 offset-md-4">
-        <div class="section-header">
-          <h2 class="title">Follow Us</h2>
-        </div>
-      </div>
-    </div>
-    
-  </div>
-</section>
-<footer>
-  <div class="container">
-    <div class="row text-center">
-      <div class="col-md-4 offset-md-4">
-        <div class="section-header">
-          <h2 class="title"><img src="/images/NABI.png" alt=""></h2>
-        </div>
-      </div>
-    </div>
-      <div class="row">
-          <div class="col-md-12">
-      <ul class="footer-follow">
-        <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
-        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-        <li><a href="#"><i class="fa fa-paypal"></i></a></li>
-        
-      </ul>
-      <div class="footer-copyrights">
-        <p class="text-white">NABIfreedom is a 501 (c) 3 non-profit as determined by the Internal           Revenue Service.&copy;2017 NABIFreedom. All rights reserved. PO BOX 38574 Houston TX 77238.</p>
-      </div>
-          </div>
-      </div>
-  </div>
-</footer>
+<%- include ("./partials/footer.ejs") %>
 
-
-
-
-
-
-
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<!-- Optional JavaScript -->
+<%- include ("./partials/jsdefault.ejs") %>
   </body>
 </html>

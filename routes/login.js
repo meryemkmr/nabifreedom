@@ -7,7 +7,9 @@ var db = require('../models')
 
 //LOGIN PAGE
 router.get('/login',  ((req, res) => {
-    res.render('login');
+    res.render('login',{
+        pageTitle: 'LOGIN'
+    });
 }))
 
 router.post('/login',(req,res)=>{

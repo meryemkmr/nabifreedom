@@ -10,7 +10,8 @@ router.get('/help', (req, res) =>{
     .then(results => {
         console.log(results)
        res.render('help.ejs',{
-           peoples: results
+           peoples: results,
+           pageTitle: 'HELP PEOPLE'
        })
       
     })

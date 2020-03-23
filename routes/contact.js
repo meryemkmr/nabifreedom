@@ -4,7 +4,7 @@ const db = require('../models');
 
 router.get('/contact', function(req, res) {
   res.render('contact', {
-    pageTitle: 'Contact',
+    pageTitle: 'CONTACT',
     pageID: 'contact'
   });
 });

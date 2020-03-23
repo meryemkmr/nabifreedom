@@ -17,7 +17,9 @@ var db = require('../models')
 
 
 router.get('/register', (req,res) => {
-    res.render('register.ejs');
+    res.render('register.ejs',{
+        pageTitle: 'REGISTER'
+    });
 })
 
 router.post('/register', (req,res) => {
