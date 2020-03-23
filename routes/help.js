@@ -8,10 +8,10 @@ router.get('/help', (req, res) =>{
     
     db.peoples.findAll()
     .then(results => {
-        console.log(results)
-       res.render('help.ejs',{
-           peoples: results
-       })
+      // console.log(results)
+      res.render('help.ejs',{
+          peoples: results
+      })
       
     })
     .catch((error)=>{

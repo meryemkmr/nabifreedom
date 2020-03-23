@@ -41,6 +41,8 @@ app.use(require('./routes/admin.js'))
 app.use(require('./routes/test.js'))
 app.use(require('./routes/register.js'));
 app.use(require('./routes/johntest.js'));
+app.use(require('./routes/helpinfo.js'));
+
 
 
 
