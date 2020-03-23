@@ -4,7 +4,7 @@ module.exports = {
   up: (queryInterface, Sequelize) => {
     
       return queryInterface.bulkInsert('peoples', [{
-        imgURL:'/images/people1.jpg',
+        imgURL:'https://i.imgur.com/2HQPQiN.jpg',
         name: 'John Doe',
         city:'Houston',
         shortSummary:"Lorem ipsum dolor sit amet consectetur  elit...",
@@ -13,7 +13,7 @@ module.exports = {
         updatedAt: new Date()
       },
       {
-        imgURL:'/images/people1.jpg',
+        imgURL:'https://i.imgur.com/2HQPQiN.jpg',
         name: 'John Doe',
         city:'Houston',
         shortSummary:"Lorem ipsum dolor sit amet consectetur  elit...",
@@ -22,7 +22,7 @@ module.exports = {
         updatedAt: new Date()
       },
       {
-        imgURL:'/images/people1.jpg',
+        imgURL:'https://i.imgur.com/2HQPQiN.jpg',
         name: 'John Doe',
         city:'Houston',
         shortSummary:"Lorem ipsum dolor sit amet consectetur  elit...",
@@ -31,7 +31,7 @@ module.exports = {
         updatedAt: new Date()
       },
       {
-        imgURL:'/images/people1.jpg',
+        imgURL:'https://i.imgur.com/2HQPQiN.jpg',
         name: 'John Doe',
         city:'Houston',
         shortSummary:"Lorem ipsum dolor sit amet consectetur  elit...",
@@ -40,7 +40,7 @@ module.exports = {
         updatedAt: new Date()
       },
       {
-        imgURL:'/images/people1.jpg',
+        imgURL:'https://i.imgur.com/2HQPQiN.jpg',
         name: 'John Doe',
         city:'Houston',
         shortSummary:"Lorem ipsum dolor sit amet consectetur  elit...",
@@ -49,7 +49,7 @@ module.exports = {
         updatedAt: new Date()
       },
       {
-        imgURL:'/images/people1.jpg',
+        imgURL:'https://i.imgur.com/2HQPQiN.jpg',
         name: 'John Doe',
         city:'Houston',
         shortSummary:"Lorem ipsum dolor sit amet consectetur  elit...",
@@ -58,7 +58,7 @@ module.exports = {
         updatedAt: new Date()
       },
       {
-        imgURL:'/images/people1.jpg',
+        imgURL:'https://i.imgur.com/2HQPQiN.jpg',
         name: 'John Doe',
         city:'Houston',
         shortSummary:"Lorem ipsum dolor sit amet consectetur  elit...",
@@ -67,7 +67,7 @@ module.exports = {
         updatedAt: new Date()
       },
       {
-        imgURL:'/images/people1.jpg',
+        imgURL:'https://i.imgur.com/2HQPQiN.jpg',
         name: 'John Doe',
         city:'Houston',
         shortSummary:"Lorem ipsum dolor sit amet consectetur  elit...",
@@ -76,7 +76,7 @@ module.exports = {
         updatedAt: new Date()
       },
       {
-        imgURL:'/images/people1.jpg',
+        imgURL:'https://i.imgur.com/2HQPQiN.jpg',
         name: 'John Doe',
         city:'Houston',
         shortSummary:"Lorem ipsum dolor sit amet consectetur  elit...",
@@ -85,7 +85,7 @@ module.exports = {
         updatedAt: new Date()
       },
       {
-        imgURL:'/images/people1.jpg',
+        imgURL:'https://i.imgur.com/2HQPQiN.jpg',
         name: 'John Doe',
         city:'Houston',
         shortSummary:"Lorem ipsum dolor sit amet consectetur  elit...",
@@ -94,7 +94,7 @@ module.exports = {
         updatedAt: new Date()
       },
       {
-        imgURL:'/images/people1.jpg',
+        imgURL:'https://i.imgur.com/2HQPQiN.jpg',
         name: 'John Doe',
         city:'Houston',
         shortSummary:"Lorem ipsum dolor sit amet consectetur  elit...",
@@ -103,7 +103,7 @@ module.exports = {
         updatedAt: new Date()
       },
       {
-        imgURL:'/images/people1.jpg',
+        imgURL:'https://i.imgur.com/2HQPQiN.jpg',
         name: 'John Doe',
         city:'Houston',
         shortSummary:"Lorem ipsum dolor sit amet consectetur  elit...",
@@ -112,14 +112,86 @@ module.exports = {
         updatedAt: new Date()
       },
       {
-        imgURL:'/images/people1.jpg',
+        imgURL:'https://i.imgur.com/2HQPQiN.jpg',
         name: 'John Doe',
         city:'Houston',
         shortSummary:"Lorem ipsum dolor sit amet consectetur  elit...",
         body:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat libero pariaturlaborum veniam dicta, totam necessitatibus dolore ad, corporis error beatae aut rerum explicabo sint nisi excepturi? Fuga, hic tempora.",
         createdAt: new Date(),
         updatedAt: new Date()
-      }
+      },
+      {
+        imgURL:'https://i.imgur.com/2HQPQiN.jpg',
+        name: 'John Doe',
+        city:'Houston',
+        shortSummary:"Lorem ipsum dolor sit amet consectetur  elit...",
+        body:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat libero pariaturlaborum veniam dicta, totam necessitatibus dolore ad, corporis error beatae aut rerum explicabo sint nisi excepturi? Fuga, hic tempora.",
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        imgURL:'https://i.imgur.com/2HQPQiN.jpg',
+        name: 'John Doe',
+        city:'Houston',
+        shortSummary:"Lorem ipsum dolor sit amet consectetur  elit...",
+        body:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat libero pariaturlaborum veniam dicta, totam necessitatibus dolore ad, corporis error beatae aut rerum explicabo sint nisi excepturi? Fuga, hic tempora.",
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        imgURL:'https://i.imgur.com/2HQPQiN.jpg',
+        name: 'John Doe',
+        city:'Houston',
+        shortSummary:"Lorem ipsum dolor sit amet consectetur  elit...",
+        body:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat libero pariaturlaborum veniam dicta, totam necessitatibus dolore ad, corporis error beatae aut rerum explicabo sint nisi excepturi? Fuga, hic tempora.",
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        imgURL:'https://i.imgur.com/2HQPQiN.jpg',
+        name: 'John Doe',
+        city:'Houston',
+        shortSummary:"Lorem ipsum dolor sit amet consectetur  elit...",
+        body:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat libero pariaturlaborum veniam dicta, totam necessitatibus dolore ad, corporis error beatae aut rerum explicabo sint nisi excepturi? Fuga, hic tempora.",
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        imgURL:'https://i.imgur.com/2HQPQiN.jpg',
+        name: 'John Doe',
+        city:'Houston',
+        shortSummary:"Lorem ipsum dolor sit amet consectetur  elit...",
+        body:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat libero pariaturlaborum veniam dicta, totam necessitatibus dolore ad, corporis error beatae aut rerum explicabo sint nisi excepturi? Fuga, hic tempora.",
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        imgURL:'https://i.imgur.com/2HQPQiN.jpg',
+        name: 'John Doe',
+        city:'Houston',
+        shortSummary:"Lorem ipsum dolor sit amet consectetur  elit...",
+        body:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat libero pariaturlaborum veniam dicta, totam necessitatibus dolore ad, corporis error beatae aut rerum explicabo sint nisi excepturi? Fuga, hic tempora.",
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        imgURL:'https://i.imgur.com/2HQPQiN.jpg',
+        name: 'John Doe',
+        city:'Houston',
+        shortSummary:"Lorem ipsum dolor sit amet consectetur  elit...",
+        body:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat libero pariaturlaborum veniam dicta, totam necessitatibus dolore ad, corporis error beatae aut rerum explicabo sint nisi excepturi? Fuga, hic tempora.",
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        imgURL:'https://i.imgur.com/2HQPQiN.jpg',
+        name: 'John Doe',
+        city:'Houston',
+        shortSummary:"Lorem ipsum dolor sit amet consectetur  elit...",
+        body:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat libero pariaturlaborum veniam dicta, totam necessitatibus dolore ad, corporis error beatae aut rerum explicabo sint nisi excepturi? Fuga, hic tempora.",
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
     ], {});
     
   },
