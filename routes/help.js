@@ -8,19 +8,17 @@ router.get('/help', (req, res) =>{
     
     db.peoples.findAll()
     .then(results => {
-        results.forEach(record=>{
-            console.log("=======RECORD=======")
-            console.log(record)
-            res.render('help.ejs', {
-                peoples: record
-              })
-        })
+        console.log(results)
+       res.render('help.ejs',{
+           peoples: results
+       })
       
     })
     .catch((error)=>{
         res.send("there was an error")
     })
 });
+
 
 
 
