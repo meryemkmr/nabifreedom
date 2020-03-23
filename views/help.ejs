@@ -146,14 +146,13 @@
               <div class="col-md-3">
                   <div class="card text-center ">
                       <div class="card-block">
-                        <a href="/<%= results.name %>"></a>
-                            <img src="<%= results.imgURL %>" alt="" class="img-fluid rounded-circle my-4">
+                        <a href="/helpinfo/<%= results.id %>"><img src="<%= results.imgURL %>" alt="" class="img-fluid rounded-circle my-4"></a>
                             <h3><%= results.name %></h3>
                             <h5><%= results.city %></h5>
                             <p class="text-mute"><%= results.shortSummary %></p>
                             <div class="p-4">
-                            <a href="/<%= results.name %>"><button id="sendMessageButton" class="main-btn" type="submit" value="Submit">Learn More...</button></a>
-                          </div>
+                              <a href="/helpinfo/<%= results.id %>"><button id="sendMessageButton" class="main-btn" type="submit" value="Submit">Learn More...</button></a>
+                            </div>
                       </div>
                   </div>
               </div>
