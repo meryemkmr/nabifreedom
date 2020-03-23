@@ -6,13 +6,21 @@ const db = require('../models');
 router.get('/help', (req, res) =>{
     
     
-    res.render('help', {
-        pageTitle: 'Help',
-        
-        pageID: 'help'
-      });
-    
-    });
+    db.peoples.findAll()
+    .then(results => {
+        results.forEach(record=>{
+            console.log("=======RECORD=======")
+            console.log(record)
+            res.render('help.ejs', {
+                peoples: record
+              })
+        })
+      
+    })
+    .catch((error)=>{
+        res.send("there was an error")
+    })
+});
 
 
 
