@@ -13,7 +13,7 @@ router.get('/help', (req, res) =>{
            peoples: results,
            pageTitle: 'HELP PEOPLE'
        })
-      
+     
     })
     .catch((error)=>{
         res.send("there was an error")
