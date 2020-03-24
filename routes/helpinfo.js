@@ -1,10 +1,20 @@
 const express = require('express');
 const router = express.Router();
 const db = require('../models');
+let role = '';
+let loggedIn = false;
 
 router.get('/helpinfo/:id', (req,res) => {
-    // console.log(`the name is: ${req.params.name}`)
-    // res.send('info page for people')
+    if(req.session.userid == 'admin') {
+        role = 'admin';
+    } else {
+        role = 'normal';
+    }
+    if(req.session.userid != undefined){
+        loggedIn = true;
+    } else{
+        loggedIn = false;
+    }
     db.peoples.findAll({where: {id: req.params.id}})
     .then((personResults) => {
         // console.log('*************************** INDEX 0 ********************************');
@@ -12,7 +22,12 @@ router.get('/helpinfo/:id', (req,res) => {
         // console.log('*************************** INDEX 1 ********************************');
         // console.log(personResults[1]);
         res.render('helpinfo.ejs',{
-            person: personResults[0]
+            person: personResults[0], //weirdly, this only seems to work with the [0] index 
+            //if i try to pass the entire object, the ejs doesn't work
+            pageTitle: personResults[0].name,
+            pageid: 'info',
+            role: role,
+            loggedIn: loggedIn
         })
     })   
     .catch((error)=>{

@@ -1,11 +1,26 @@
 var express = require('express');
 var router = express.Router();
 const db = require('../models');
+let role = '';
+let loggedIn = false;
 
 router.get('/contact', function(req, res) {
+  if(req.session.userid == 'admin') {
+    role = 'admin';
+  } else {
+    role = 'normal';
+  }
+  if(req.session.userid != undefined){
+    loggedIn = true;
+  } else{
+    loggedIn = false;
+  }
+  console.log(`contact form is ${loggedIn}`);
   res.render('contact', {
     pageTitle: 'CONTACT',
-    pageID: 'contact'
+    pageID: 'contact',
+    role: role,
+    loggedIn: loggedIn
   });
 });
 

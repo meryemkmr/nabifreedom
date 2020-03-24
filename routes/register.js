@@ -5,7 +5,8 @@ const express = require('express');
 const app = express();
 const router = express.Router();
 const bcrypt = require('bcryptjs');
-
+let role = '';
+let loggedIn = false;
 
 
 //LOADING USER MODELS/PROFILES
@@ -17,8 +18,20 @@ var db = require('../models')
 
 
 router.get('/register', (req,res) => {
+    if(req.session.userid == 'admin') {
+        role = 'admin';
+    } else {
+        role = 'normal';
+    }
+    if(req.session.userid != undefined){
+        loggedIn = true;
+    } else{
+        loggedIn = false;
+    }
     res.render('register.ejs',{
-        pageTitle: 'REGISTER'
+        pageTitle: 'REGISTER',
+        role: role,
+        loggedIn: loggedIn
     });
 })
 
