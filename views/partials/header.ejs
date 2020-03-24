@@ -23,13 +23,23 @@
                                       Login
                                     </button>
                                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                      <% if (loggedIn == false) { %>
                                       <a class="dropdown-item" href="/login">LogIn</a>
                                       <a class="dropdown-item" href="/register">Register</a>
+                                      <% } %>
+                                      <% if (loggedIn == true) { %>
                                       <a class="dropdown-item" href="/logout">LogOut</a>
+                                      <% } %>
                                     </div>
                                   </div>
                                   </li>
-                                  <li class="nav-item"><a href="/admin" class="nav-link">Admin</a></li>
+                                  <% if(role == 'admin') { %>
+                                  <li class="nav-item adminHide"><a href="/admin" class="nav-link">Admin</a></li>
+                                  <% } %>
+
+
+
+                                  
                             </ul>
                         </div>
                     </div>

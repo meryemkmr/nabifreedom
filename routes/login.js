@@ -1,14 +1,28 @@
 const express = require('express');
 const router = express.Router();
 var bcrypt = require('bcryptjs');
+let role = '';
+let loggedIn = false;
 
 //LOADING USER MODELS/PROFILES
 var db = require('../models')
 
 //LOGIN PAGE
 router.get('/login',  ((req, res) => {
+    if(req.session.userid == 'admin') {
+        role = 'admin';
+    } else {
+        role = 'normal';
+    }
+    if(req.session.userid != undefined){
+        loggedIn = true;
+    } else{
+        loggedIn = false;
+    }
     res.render('login',{
-        pageTitle: 'LOGIN'
+        pageTitle: 'LOGIN',
+        role: role,
+        loggedIn: loggedIn
     });
 }))
 
@@ -62,9 +76,10 @@ router.get('/error',(req,res)=>{
 
 //LOGOUT
 router.get('/logout', (req, res) => {
+    loggedIn = false;
     req.session.destroy((err) => { //this will destroy the login cookie and log the user out
         res.redirect('/');
-     })
+    })
 });
 
 
