@@ -7,12 +7,12 @@
 
 <!-- <-----------------NAVBAR----------------------------------> 
 <%- include ("./partials/header.ejs") %>
-   
+
 <!--==========================
     Admin  Section
 ============================-->
 
-<!-- Sidebar -->
+<!-- Top Grey Bar with dashboard -->
 <section id="breadcrumb">
     <div class="container">
         <ol class="breadcrumb">
@@ -24,6 +24,9 @@
 <section id="main">
     <div class="container">
         <div class="row">
+            <!-- ================================================================================================================================ -->
+            <!--                                                               Left Side Nav menu -->
+            <!-- ================================================================================================================================ -->
             <div class="col-md-3">
                 <div class="list-group">
                     <a href="#" class="list-group-item list-group-item-action active">
@@ -35,6 +38,10 @@
                     
                 </div>
             </div>
+
+            <!-- ================================================================================================================================ -->
+            <!--                                                               Website Overview -->
+            <!-- ================================================================================================================================ -->
             <div class="col-md-9">
                 <div class="card ">
                     <div class="card-heading ">
@@ -114,8 +121,9 @@
                     </div>
                 </div>
 
-                
-                <!-- NEW MESSAGES -->
+                <!-- ================================================================================================================================ -->
+                <!--                                                               NEW MESSAGES -->
+                <!-- ================================================================================================================================ -->
                 <div class="card ">
                     <div class="card-heading ">
                         <h3 class="card-title ">New Messages</h3>
@@ -125,95 +133,70 @@
                             <thead>
                               <tr>
                                 <th scope="col">#</th>
-                                <th scope="col">First</th>
-                                <th scope="col">Last</th>
+                                <th scope="col">Name</th>
                                 <th scope="col">Email</th>
+                                <th scope="col">Phone</th>
                                 <th scope="col">Message</th>
-                                <th scope="col"></th>
+                                <th scope="col"></th> <!--for the buttons -->
                               </tr>
                             </thead>
                             <tbody>
-                              <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                                <td><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem nostrum, aspernatur, dolor odio tempora officiis vitae similique totam, perspiciatis blanditiis ducimus doloribus quaerat aperiam nemo. A facilis reiciendis blanditiis officiis!</p></td>
-                                
-                                <td><a href="" class="btn main-btn btn-success">Edit</a><a href="" class="btn main-btn btn-danger">Delete</a></td>
-
-                              </tr>
-                              <tr>
-                                <th scope="row">2</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>@fat</td>
-                                <td><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem nostrum, aspernatur, dolor odio tempora officiis vitae similique totam, perspiciatis blanditiis ducimus doloribus quaerat aperiam nemo. A facilis reiciendis blanditiis officiis!</p></td>
-                                
-                                <td><a href="" class="btn main-btn btn-success ">Edit</a><a href="" class="btn main-btn btn-danger ">Delete</a></td>
-                              </tr>
-                              <tr>
-                                <th scope="row">3</th>
-                                <td>Larry</td>
-                                <td>the Bird</td>
-                                <td>@twitter</td>
-                                <td><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem nostrum, aspernatur, dolor odio tempora officiis vitae similique totam, perspiciatis blanditiis ducimus doloribus quaerat aperiam nemo. A facilis reiciendis blanditiis officiis!</p></td>
-                                
-                                <td><a href="" class="btn main-btn btn-success">Edit</a><a href="" class="btn main-btn btn-danger">Delete</a></td>
-                              </tr>
+                              <% let newMessageCount = 0; %>
+                              <% contactResults.forEach((newMsg) => { %>
+                                <% if (newMsg.responded == false) { %>
+                                <% newMessageCount += 1; %>
+                                  <tr>
+                                    <th scope="row"><%= newMessageCount %></th>
+                                    <td><%= newMsg.contactName %></td>
+                                    <td><%= newMsg.contactEmail %></td>
+                                    <td><%= newMsg.contactPhone %></td>
+                                    <td><%= newMsg.contactMsg %></td>
+                                    <td><a href="" class="btn main-btn btn-success">Edit</a><a href="" class="btn main-btn btn-danger">Delete</a></td>
+                                  </tr>
+                              <% } %>
+                              <% }) %>
                             </tbody>
                           </table>
                     </div>
 
                 </div>
-                <!-- OLD MESSAGES  -->
+                
+                <!-- ================================================================================================================================ -->
+                <!--                                                               OLD MESSAGES -->
+                <!-- ================================================================================================================================ -->
                 <div class="card ">
                     <div class="card-heading ">
                         <h3 class="card-title ">Old Messages</h3>
                     </div>
                     <div class="card-body"> 
-                        <table class="table table-striped">
-                            <thead>
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Phone</th>
+                            <th scope="col">Message</th>
+                            <th scope="col"></th> <!--for the buttons -->
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <% let oldMessageCount = 0; %>
+                          <% contactResults.forEach((oldMsg) => { %>
+                            <% if (oldMsg.responded == true) { %>
+                            <% oldMessageCount += 1; %>
                               <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">First</th>
-                                <th scope="col">Last</th>
-                                <th scope="col">Email</th>
-                                <th scope="col">Message</th>
-                                <th scope="col"></th>
+                                <th scope="row"><%= oldMessageCount %></th>
+                                <td><%= oldMsg.contactName %></td>
+                                <td><%= oldMsg.contactEmail %></td>
+                                <td><%= oldMsg.contactPhone %></td>
+                                <td><%= oldMsg.contactMsg %></td>
+                                <td><a href="" class="btn main-btn btn-success">Edit</a><a href="" class="btn main-btn btn-danger">Delete</a></td>
                               </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                                <td><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem nostrum, aspernatur, dolor odio tempora officiis vitae similique totam, perspiciatis blanditiis ducimus doloribus quaerat aperiam nemo. A facilis reiciendis blanditiis officiis!</p></td>
-                                
-                                <td><a href="" class="btn btn-success">Edit</a><a href="" class="btn btn-danger">Delete</a></td>
-
-                              </tr>
-                              <tr>
-                                <th scope="row">2</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>@fat</td>
-                                <td><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem nostrum, aspernatur, dolor odio tempora officiis vitae similique totam, perspiciatis blanditiis ducimus doloribus quaerat aperiam nemo. A facilis reiciendis blanditiis officiis!</p></td>
-                                
-                                <td><a href="" class="btn btn-success ">Edit</a><a href="" class="btn btn-danger ">Delete</a></td>
-                              </tr>
-                              <tr>
-                                <th scope="row">3</th>
-                                <td>Larry</td>
-                                <td>the Bird</td>
-                                <td>@twitter</td>
-                                <td><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem nostrum, aspernatur, dolor odio tempora officiis vitae similique totam, perspiciatis blanditiis ducimus doloribus quaerat aperiam nemo. A facilis reiciendis blanditiis officiis!</p></td>
-                                
-                                <td><a href="" class="btn btn-success">Edit</a><a href="" class="btn btn-danger">Delete</a></td>
-                              </tr>
-                            </tbody>
-                          </table>
+                          <% } %>
+                          <% }) %>
+                        </tbody>
+                      </table>
                     </div>
 
                 </div>
@@ -222,20 +205,12 @@
     </div>
 </section>
 
-
-
-
-
-
-
-	
-
-
-
-
-
-
-
+<!-- ==================================================================================================================== -->
+                                        <!-- Objects sent to this page by the server -->
+<!-- ==================================================================================================================== -->
+<!-- contactResults -->
+<!-- userResults -->
+<!-- peoplesResults -->
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -244,3 +219,4 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
 </html>
+
