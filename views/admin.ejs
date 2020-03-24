@@ -1,38 +1,24 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <%- include ("./partials/head.ejs") %>
-  </head>
-  <body>
+<head>
+  <%- include ("./partials/head.ejs") %>
+</head>
+<body>
 
-
-
-
-
-
-     <!-- <-----------------NAVBAR----------------------------------> 
-
-     <%- include ("./partials/header.ejs") %>
-
-
-
-
-
-
-    
-    <!--==========================
+<!-- <-----------------NAVBAR----------------------------------> 
+<%- include ("./partials/header.ejs") %>
+   
+<!--==========================
     Admin  Section
 ============================-->
- <!-- Sidebar -->
- 
+
+<!-- Sidebar -->
 <section id="breadcrumb">
     <div class="container">
         <ol class="breadcrumb">
             <li class="active">Dashboard</li>
         </ol>
     </div>
-
-
 </section>
 
 <section id="main">
@@ -41,13 +27,13 @@
             <div class="col-md-3">
                 <div class="list-group">
                     <a href="#" class="list-group-item list-group-item-action active">
-                     <span class="fa fa-cog" aria-hidden = "true"></span> Dashboard
+                      <span class="fa fa-cog" aria-hidden = "true"></span> Dashboard
                     </a>
                     <a href="#" class="list-group-item list-group-item-action"><span class="fa fa-list-alt" aria-hidden = "true"></span>Pages <span class="badge badge-secondary">12</span></a>
                     <a href="#" class="list-group-item list-group-item-action"><span class="fa fa-pencil" aria-hidden = "true"></span>Posts<span class="badge badge-secondary">21</span></a>
                     <a href="#" class="list-group-item list-group-item-action"><span class="fa fa-user" aria-hidden = "true"></span>Users<span class="badge badge-secondary">30</span></a>
                     
-                  </div>
+                </div>
             </div>
             <div class="col-md-9">
                 <div class="card ">
@@ -82,7 +68,10 @@
                       
                     </div>
                 </div>
-                <!-- USER LIST -->
+
+                <!-- ================================================================================================================================ -->
+                <!--                                                               USER LIST -->
+                <!-- ================================================================================================================================ -->
                 <div class="card ">
                     <div class="card-heading ">
                         <h3 class="card-title "> User List</h3>
@@ -96,7 +85,6 @@
                                 <th scope="col">lname</th>
                                 <th scope="col">Email</th>
                                 <th scope="col">Username</th>
-                               
                               </tr>
                             </thead>
                             <tbody>
@@ -106,9 +94,6 @@
                                 <td>Otto</td>
                                 <td>@mdo</td>
                                 <td>lore1</td>
-                                
-                                
-
                               </tr>
                               <tr>
                                 <th scope="row">2</th>
@@ -127,8 +112,9 @@
                             </tbody>
                           </table>
                     </div>
-
                 </div>
+
+                
                 <!-- NEW MESSAGES -->
                 <div class="card ">
                     <div class="card-heading ">

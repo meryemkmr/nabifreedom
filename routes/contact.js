@@ -15,7 +15,7 @@ router.get('/contact', function(req, res) {
   } else{
     loggedIn = false;
   }
-  console.log(`contact form is ${loggedIn}`);
+  // console.log(`contact form is ${loggedIn}`);
   res.render('contact', {
     pageTitle: 'CONTACT',
     pageID: 'contact',
@@ -32,7 +32,7 @@ router.post('/contact', (req,res) => {
     //pull the values from the form the user submitted:
     let contactName = req.body.contactName;
     let contactEmail = req.body.contactEmail;
-    console.log(`contact email is: ${contactEmail}`);
+    // console.log(`contact email is: ${contactEmail}`);
     let contactPhone = req.body.contactPhone;
     let contactMessage = req.body.contactMessage;
     //the responded key here always has a starting value of no because the user submitted the form and we havn't had a chance to respond yet

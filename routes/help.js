@@ -16,8 +16,8 @@ router.get('/help', (req, res) =>{
     } else{
       loggedIn = false;
     }
-    console.log(`help form is ${loggedIn}`);
-    console.log(req.session.userid)
+    // console.log(`help form is ${loggedIn}`);
+    // console.log(req.session.userid)
     db.peoples.findAll()
     .then(results => {
       // console.log(results)

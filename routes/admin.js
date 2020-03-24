@@ -13,7 +13,6 @@ let auth = (req, res, next) => {
       }
 }
 
-
 //ADMIN PAGE
 router.get('/admin', auth, ((req, res) => {
     res.render('admin',{
