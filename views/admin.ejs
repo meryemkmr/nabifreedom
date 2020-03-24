@@ -32,9 +32,9 @@
                     <a href="#" class="list-group-item list-group-item-action active">
                       <span class="fa fa-cog" aria-hidden = "true"></span> Dashboard
                     </a>
-                    <a href="#" class="list-group-item list-group-item-action"><span class="fa fa-list-alt" aria-hidden = "true"></span>Pages <span class="badge badge-secondary">12</span></a>
-                    <a href="#" class="list-group-item list-group-item-action"><span class="fa fa-pencil" aria-hidden = "true"></span>Posts<span class="badge badge-secondary">21</span></a>
-                    <a href="#" class="list-group-item list-group-item-action"><span class="fa fa-user" aria-hidden = "true"></span>Users<span class="badge badge-secondary">30</span></a>
+                    <!-- <a href="#" class="list-group-item list-group-item-action"><span class="fa fa-list-alt" aria-hidden = "true"></span>Pages <span class="badge badge-secondary">12</span></a> -->
+                    <!-- <a href="#" class="list-group-item list-group-item-action"><span class="fa fa-pencil" aria-hidden = "true"></span>Posts<span class="badge badge-secondary">21</span></a> -->
+                    <span href="#" class="list-group-item list-group-item-action"><span class="fa fa-user" aria-hidden = "true"></span>Users<span class="badge badge-secondary"><%= userResults.length %></span></a>
                     
                 </div>
             </div>
@@ -42,6 +42,17 @@
             <!-- ================================================================================================================================ -->
             <!--                                                               Website Overview -->
             <!-- ================================================================================================================================ -->
+            <!-- count our new and old messages -->
+            <% let newMsgCountTotal = 0; %>
+            <% let oldMsgCountTotal = 0; %>
+            <% contactResults.forEach((eachMsg) => { %>
+              <% if (eachMsg.responded == false) { %>
+                <% newMsgCountTotal += 1; %>
+              <%} else { %>
+                <% oldMsgCountTotal += 1; %>
+              <% } %>
+            <% }) %>
+
             <div class="col-md-9">
                 <div class="card ">
                     <div class="card-heading ">
@@ -50,13 +61,13 @@
                     <div class="card-body d-flex">
                         <div class="col-md-3">
                             <div class="card dash-box">
-                                <h2><span class="fa fa-envelope" aria-hidden = "true"></span><span class="badge badge-secondary">12</span></h2>
+                                <h2><span class="fa fa-envelope" aria-hidden = "true"></span><span class="badge badge-secondary"><%= newMsgCountTotal %></span></h2>
                                 <h4>New </h4>
                             </div>
                         </div>
                         <div class="col-md-3">
                             <div class="card dash-box">
-                                <h2><span class="fa fa-envelope-open" aria-hidden = "true"></span><span class="badge badge-secondary">30</span></h2>
+                                <h2><span class="fa fa-envelope-open" aria-hidden = "true"></span><span class="badge badge-secondary"><%= oldMsgCountTotal %></span></h2>
                                 <h4>Old </h4>
                             </div>
                         </div>
@@ -92,30 +103,22 @@
                                 <th scope="col">lname</th>
                                 <th scope="col">Email</th>
                                 <th scope="col">Username</th>
+                                <th scope="col"></th> <!--for the buttons -->
                               </tr>
                             </thead>
                             <tbody>
-                              <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                                <td>lore1</td>
-                              </tr>
-                              <tr>
-                                <th scope="row">2</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>@fat</td>
-                                <td> lorem2</td>
-                              </tr>
-                              <tr>
-                                <th scope="row">3</th>
-                                <td>Larry</td>
-                                <td>the Bird</td>
-                                <td>@twitter</td>
-                                <td>lore3</td>
-                              </tr>
+                              <% let userNumber = 0; %>
+                              <% userResults.forEach((eachUser) => { %>
+                                <% userNumber += 1; %>
+                                  <tr>
+                                    <th scope="row"><%= userNumber %></th>
+                                    <td><%= eachUser.fName %></td>
+                                    <td><%= eachUser.lName %></td>
+                                    <td><%= eachUser.email %></td>
+                                    <td><%= eachUser.username %></td>
+                                    <td><a href="" class="btn main-btn btn-success">Edit</a><a href="" class="btn main-btn btn-danger">Delete</a></td>
+                                  </tr>
+                              <% }) %>
                             </tbody>
                           </table>
                     </div>
@@ -151,7 +154,7 @@
                                     <td><%= newMsg.contactEmail %></td>
                                     <td><%= newMsg.contactPhone %></td>
                                     <td><%= newMsg.contactMsg %></td>
-                                    <td><a href="" class="btn main-btn btn-success">Edit</a><a href="" class="btn main-btn btn-danger">Delete</a></td>
+                                    <td><a href="" class="btn main-btn btn-success">Replied?</a><a href="" class="btn main-btn btn-danger">Delete</a></td>
                                   </tr>
                               <% } %>
                               <% }) %>
@@ -191,7 +194,7 @@
                                 <td><%= oldMsg.contactEmail %></td>
                                 <td><%= oldMsg.contactPhone %></td>
                                 <td><%= oldMsg.contactMsg %></td>
-                                <td><a href="" class="btn main-btn btn-success">Edit</a><a href="" class="btn main-btn btn-danger">Delete</a></td>
+                                <td><a href="" class="btn main-btn btn-success">New</a><a href="" class="btn main-btn btn-danger">Delete</a></td>
                               </tr>
                           <% } %>
                           <% }) %>
