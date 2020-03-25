@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <%- include ("./partials/head.ejs") %>
+</head>
+<body>
+
+<!-- <-----------------NAVBAR----------------------------------> 
+<%- include ("./partials/header.ejs") %>
+
+<!--==========================
+    Admin  Section
+============================-->
+
+<section id="main">
+    <div class="container">
+        <div class="row">
+            <!-- ================================================================================================================================ -->
+            <!--                                                               Left Side Nav menu -->
+            <!-- ================================================================================================================================ -->
+            <%- include ("./partials/adminLeftNav.ejs") %>
+
+            <!-- ================================================================================================================================ -->
+            <!--                                                               Website Overview -->
+            <!-- ================================================================================================================================ -->
+            <div class="col-md-9">
+                <!-- ================================================================================================================================ -->
+                <!--                                                               USER LIST -->
+                <!-- ================================================================================================================================ -->
+                <div class="card ">
+                    <div class="card-heading ">
+                        <h3 class="card-title "> User List</h3>
+                    </div>
+                    <div class="card-body"> 
+                        <table class="table table-striped">
+                            <thead>
+                              <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">fname</th>
+                                <th scope="col">lname</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Username</th>
+                                <th scope="col"></th> <!--for the buttons -->
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <% let userNumber = 0; %>
+                              <% userResults.forEach((eachUser) => { %>
+                                <% userNumber += 1; %>
+                                  <tr>
+                                    <th scope="row"><%= userNumber %></th>
+                                    <td><%= eachUser.fName %></td>
+                                    <td><%= eachUser.lName %></td>
+                                    <td><%= eachUser.email %></td>
+                                    <td><%= eachUser.username %></td>
+                                    <td><a href="" class="btn main-btn btn-success">Edit</a><a href="" class="btn main-btn btn-danger">Delete</a></td>
+                                  </tr>
+                              <% }) %>
+                            </tbody>
+                          </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================================================================================================================== -->
+                                        <!-- Objects sent to this page by the server -->
+<!-- ==================================================================================================================== -->
+<!-- userResults -->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
+
