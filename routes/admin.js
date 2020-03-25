@@ -4,6 +4,10 @@ let role = '';
 let loggedIn = false;
 const db = require('../models');
 
+//============================================================================
+//                      Admin Authorization Function
+//============================================================================
+
 let auth = (req, res, next) => {
       if(req.session.userid == 'admin') { //if the proper cookie exists
         role = 'admin';
@@ -13,8 +17,16 @@ let auth = (req, res, next) => {
         res.redirect('/login');
       }
 }
+//============================================================================
+//                      Protect All Admin Sites
+//============================================================================
+router.all('/admin/*', auth, (req,res,next) => {
+      next();
+})
 
-//ADMIN PAGE
+//============================================================================
+//                      Main Admin Page
+//============================================================================
 router.get('/admin', auth, ((req, res) => {
     //get all the users first
     db.users.findAll()
@@ -45,6 +57,21 @@ router.get('/admin', auth, ((req, res) => {
     // });
 }))
 
+//============================================================================
+//                      Admin Users Page
+//============================================================================
+router.get('/admin/users', auth, ((req, res) => {
+    //get all the users first
+    db.users.findAll()
+    .then((userResults) => {
+        res.render('adminUsers.ejs',{
+            pageTitle: 'ADMIN',
+            role: role,
+            loggedIn: loggedIn,
+            userResults: userResults
+        });
+    })
+}))
 
 
 // .catch((error)=>{
