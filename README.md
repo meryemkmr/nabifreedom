@@ -7,11 +7,11 @@
 * [General info](#general-info)
 * [Screenshots](#screenshots)
 * [Technologies](#technologies)
-* [Setup](#setup)
+* [Dependencies ](#dependencies)
 * [Features](#features)
 * [Status](#status)
 * [Inspiration](#inspiration)
-* [Contact](#contact)
+* [Team](#team)
 
 
 
@@ -44,14 +44,27 @@
 
 * Bootstrap v4.0.0
 * CSS3
+* HTML 
+* Javascript
 * Node.js v12.13.1
 * Sequelize v5.5.1
+* Amazon Web Services (AWS)
 
-## Setup
+## Dependencies
 <h4>To run this project, install it locally using npm:</h4>
 
 
-```$ npm install express```
+```$ npm install express```<br>
+``` $ npm install express-session```<br>
+```$ npm install bluebird ```<br>
+``` $ npm install body-parser```<br>
+``` $ npm install bcrypt``` <br>
+```$ npm install cookie-parser ``` <br>
+```$ npm install ejs ``` <br>
+```$ npm install pbkdf2 ``` <br>
+``` $ npm install bg``` <br>
+```$ npm install pg-hstore```<br>
+```$ npm install sequelize```<br>
 
 
 
@@ -65,3 +78,8 @@ const bodyParser = require('body-parser');
 const app = express();
 let cookieParser = require('cookie-parser');
 ```
+
+## Team
+
+* <a href="https://github.com/meryemkmr">Meryem Komur</a>
+* <a href="https://github.com/JohnKearney2020">John Kearney</a>
